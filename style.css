@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Ubuntu", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.1s;
+}
+
+.switch.container {
+  background-color: #262431;
+}
+
+.circle-bg {
+  width: 120rem;
+  height: 120rem;
+  border-radius: 50%;
+  background: linear-gradient(225deg, #ff900b, #ff505b);
+  position: absolute;
+  top: -70%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 1rem 5rem rgba(248, 106, 59, 0.2);
+}
+
+.switch .circle-bg {
+  background: linear-gradient(225deg, #93cdff, #3c3a74);
+  box-shadow: 0 1rem 5rem rgba(60, 58, 115, 0.5);
+}
+
+.form-wrapper {
+  width: 80rem;
+  height: 60rem;
+  background-color: #fff;
+  display: flex;
+  border-radius: 3rem;
+  box-shadow: 0 2rem 6rem rgba(6, 12, 15, 0.2);
+  position: relative;
+  z-index: 100;
+  transition: background-color 0.1s;
+}
+
+.switch .form-wrapper {
+  background-color: #262431;
+}
+
+.form-wrapper-left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rem 0 20rem 0;
+}
+
+.sun-moon {
+  width: 12rem;
+  height: 12rem;
+  background: linear-gradient(225deg, #ff900b, #ff505b);
+  border-radius: 50%;
+  position: relative;
+}
+
+.switch .sun-moon {
+  background: linear-gradient(225deg, #93cdff, #3c3a74);
+  box-shadow: none;
+}
+
+.sun-moon::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 9.5rem;
+  height: 9.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  transform: scale(0);
+  transform-origin: right top;
+  transition: transform 0.5s;
+}
+
+.switch .sun-moon::after {
+  background-color: #262431;
+  transform: scale(1);
+}
+
+.form-wrapper-left button {
+  width: 20rem;
+  height: 4rem;
+  background-color: #e8e8e8;
+  border: none;
+  border-radius: 3rem;
+  font-size: 1.4rem;
+  color: #777;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.1s;
+}
+
+.switch .form-wrapper-left button {
+  background-color: #1e1c28;
+}
+
+.form-wrapper-left button span {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+}
+
+.bg {
+  background-color: #fff;
+  border-radius: 3rem;
+  left: 0;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  transition: background-color 0.1s, transform 0.4s;
+}
+
+.switch .bg {
+  background-color: #34323e;
+  transform: translateX(100%);
+}
+
+.light,
+.dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.light {
+  left: 0;
+}
+
+.dark {
+  right: 0;
+}
+
+.form-wrapper-right {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8rem 0;
+}
+
+.form-wrapper-right h1 {
+  font-size: 5rem;
+  color: #777;
+}
+
+.field {
+  width: 30rem;
+  height: 5rem;
+  border: none;
+  border-bottom: 0.2rem solid #bbb;
+  font-size: 1.4rem;
+  color: #555;
+  background-color: transparent;
+}
+
+.switch .field {
+  color: #bbb;
+}
+
+.field::placeholder {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  color: #bbb;
+  letter-spacing: 0.1rem;
+}
+
+.form-wrapper-right .msg {
+  height: 10rem;
+  resize: none;
+}
+
+.form-wrapper-right button {
+  width: 30rem;
+  height: 4.5rem;
+  background: linear-gradient(225deg, #ff900b, #ff505b);
+  border: none;
+  border-radius: 3rem;
+  font-size: 1.4rem;
+  color: #bbb;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.switch .form-wrapper-right button {
+  background: linear-gradient(225deg, #93cdff, #3c3a74);
+  color: #262431;
+}
+
+.form-wrapper-right button:active {
+  transform: translateY(0.2rem);
+}
